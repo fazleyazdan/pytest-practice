@@ -10,7 +10,9 @@ def test_perimeter():
     assert rectangle.perimeter() == 7 * 2 + 3 * 2
 
 
-#! Now as you can see the statement, 'rectangle = shapes.Rectangle(7, 3)' is repeated multiple time
+#* ************************************************* *#
+
+#! Now as you can see the statement, 'rectangle = shapes.Rectangle(7, 3)' is repeated multiple time in the above code
 #! we can avoid it by using fixture in pytest
 
 @pytest.fixture
@@ -22,3 +24,7 @@ def test_area_fix(my_rectangle):              #* here we have passed my_rectangl
     
 def test_perimeter_fix(my_rectangle):          
     assert my_rectangle.perimeter() == 7 * 2 + 3 * 2 
+
+    
+#! if you want to use the fixture globally, then we have to keep the fixture content inside the 'conftest.py' file.
+#! see the test 'test_conftest.py' for more detail

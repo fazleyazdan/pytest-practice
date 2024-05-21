@@ -1,17 +1,16 @@
 import pytest
-from munch import Munch
 import source.generate_hashes as generate_hashes
 
-def test_hash_file()-> Munch:
+def test_hash_file(sha1_hash, sha256_hash, md5_hash, blake2b_256_hash):
     file_path = r"C:\Users\Fazle Yazdan\Downloads\exoplatform.portal.api-1.0.jar"
     result = generate_hashes.hash_file(file_path)
     
-    assert result.sha1 == 'f03223c94b1b485c5757abadc866e6eacb53ba03'
-    assert result.sha256 == '43f2cf8376289d32605b25a128a04e2257c142e316e5cb4811350be7396d6a10'
-    assert result.md5 == 'c762fba3f2441cc665c630fcc7fa98cc'
-    assert result.blake2b_256 == '768a601cc6c120eba4899b62f0e1c8fc11b992846a6315e6e3dbcf490e40d558'
+    assert result.sha1 == sha1_hash
+    assert result.sha256 == sha256_hash
+    assert result.md5 == md5_hash
+    assert result.blake2b_256 == blake2b_256_hash
     
-def test_wrong_hash()-> Munch:
+def test_incorrect_hash():
     file_path = r"C:\Users\Fazle Yazdan\Downloads\exoplatform.portal.api-1.0.jar"
     result = generate_hashes.hash_file(file_path)
     
@@ -20,7 +19,7 @@ def test_wrong_hash()-> Munch:
     assert result.md5 != 'incorrect hash'
     assert result.blake2b_256 != 'incorrect hash'
     
-def test_file_not_found()-> Munch:
+def test_file_not_found():
     file_path = r"C:\Users\Fazle Yazdan\Downloads\exoplatformasd.portal.api-1.0.jar"
     with pytest.raises(FileNotFoundError):
         generate_hashes.hash_file(file_path)
