@@ -5,10 +5,11 @@
 #### the file for which you wants to write tests should have the same name as the file.
 
 * for example i want to write test for the file named 'my_functions.py'
-* then the the test file name should be 'test_my_function.py'
+* then best practice is to have the same name as the code file preceded by the word 'test'. e.g:  'test_my_function.py'
 
 * similarly if the function name is 'add()'. 
-* then the test name for that function should be 'test_add()'
+* best practice is that function name should be preceded by the test 'test_add()'
+* **NOTE**: function name can be anything , but it is good to have the same or related name as the code file preceded by 'test'
 
 **one of the advantage of this approach is that tests file are automatically detected**
 
