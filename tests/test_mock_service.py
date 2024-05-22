@@ -6,6 +6,6 @@ import source.mock_service as mock_service
 def test_get_user_from_db(mock_get_user_from_db):
     mock_get_user_from_db.return_value = "Kamran"
     user_name = mock_service.get_user_from_db(1)
-    assert user_name == "Kamrann"
+    assert user_name == "Kamran"
     
     
