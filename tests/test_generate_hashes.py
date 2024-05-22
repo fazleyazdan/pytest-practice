@@ -17,7 +17,6 @@ def test_incorrect_hash(get_file):
     assert result.md5 != 'incorrect hash'
     assert result.blake2b_256 != 'incorrect hash'
     
-# def test_file_not_found(get_file):
-#     with pytest.raises(FileNotFoundError):
-#         generate_hashes.hash_file(get_file)
-#     assert True
+def test_file_not_found(get_wrong_file):
+    with pytest.raises(FileNotFoundError):
+        generate_hashes.hash_file(get_wrong_file)

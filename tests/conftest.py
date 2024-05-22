@@ -23,6 +23,10 @@ def blake2b_256_hash():
 
 @pytest.fixture
 def get_file():
-    file_path = r"C:\Users\Fazle Yazdan\Desktop\My_projects\pytest-pratice\tests\HTTPClient-0.3-3.jar"
+    file_path = r"tests\test_projects\HTTPClient-0.3-3.jar"
     return file_path
 
+@pytest.fixture
+def get_wrong_file():
+    file_path = r"tests\test_project\wrongfile3.0"
+    return file_path
