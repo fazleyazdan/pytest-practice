@@ -1,6 +1,7 @@
 import pytest
 import source.generate_hashes as generate_hashes
 
+
 def test_hash_file(get_file, sha1_hash, sha256_hash, md5_hash, blake2b_256_hash):
     result = generate_hashes.hash_file(get_file)
     
