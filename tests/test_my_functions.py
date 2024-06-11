@@ -20,7 +20,7 @@ def test_division_by_zero():
 
 #* Mark is the same as 'tags' in cypress. i.e (skip, only)
 
-# if the test case execute slow then we can mark it as slow
+# if the test case execute slow then we can mark it as slow  
 
 @pytest.mark.slow
 def test_add_slow():
