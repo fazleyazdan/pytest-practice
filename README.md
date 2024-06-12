@@ -2,7 +2,7 @@
 
 #### install pytest library using 'pip install pytest'
 
-#### the file for which you wants to write tests should have the same name as the file.
+#### the file for which you wants to write tests is recommended to have the same name as the file.
 
 * for example i want to write test for the file named 'my_functions.py'
 * then best practice is to have the same name as the code file preceded by the word 'test'. e.g:  'test_my_function.py'
