@@ -6,3 +6,5 @@ def get_user():
         return response.json()
     
     raise requests.HTTPError
+
+
