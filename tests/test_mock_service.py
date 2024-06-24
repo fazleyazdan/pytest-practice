@@ -8,6 +8,3 @@ def test_get_user_from_db(mock_get_user_from_db):
     user_name = mock_service.get_user_from_db(1)
     assert user_name == "Kamran"
     
-    
-    
-    
