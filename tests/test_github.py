@@ -5,7 +5,7 @@ from munch import Munch
 def test_get_workflow():
     
     # Define the necessary variables
-    GITHUB_TOKEN = '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'
+    GITHUB_TOKEN = 'Your token'
     OWNER = 'fazleyazdan7'
     REPO = 'github-api'
     WORKFLOW_ID = 'main.yml' 
