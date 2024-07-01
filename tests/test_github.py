@@ -5,7 +5,7 @@ from munch import Munch
 def test_get_workflow():
     
     # Define the necessary variables
-    GITHUB_TOKEN = 'Your token'
+    GITHUB_TOKEN = 'your token'
     OWNER = 'fazleyazdan7'
     REPO = 'github-api'
     WORKFLOW_ID = 'main.yml' 
@@ -25,7 +25,7 @@ def test_get_workflow():
     assert response.status_code == 200
     workflow_info = Munch(response.json())
     
-    assert workflow_info.name == "hello-worldd"
+    assert workflow_info.name == "hello-world"
     assert workflow_info.state == "active"
     
     # Check the response status and print the workflow information
