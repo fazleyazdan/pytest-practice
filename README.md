@@ -14,3 +14,4 @@
 **one of the advantage of this approach is that tests file are automatically detected**
 
 * to run an individual test:  `pytest 'relative path of the file' `
+
