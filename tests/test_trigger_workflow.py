@@ -28,4 +28,4 @@ def test_get_workflow():
     # Check the response status 
     assert response.status_code == 204
     
-#* status code '204' is returned when workflow is triggered
+#* status code '204' is returned when workflow is triggered.
