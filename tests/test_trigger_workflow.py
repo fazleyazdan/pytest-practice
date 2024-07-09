@@ -28,8 +28,3 @@ def test_get_workflow():
     # Check the response status 
     assert response.status_code == 204
     
-    # if response.status_code == 204:
-    #     print("Workflow triggered successfully!")
-    # else:
-    #     print(f"Failed to trigger workflow: {response.status_code}")
-    #     print(response.json())
