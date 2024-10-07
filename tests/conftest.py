@@ -32,4 +32,16 @@ def get_wrong_file():
     return file_path
 
 
-
+@pytest.fixture
+def get_package_details():
+    package_details = {
+    "description": "KiwiLogger\r\nA simple Python logger class that logs messages to Logtail, a local file, and/or the terminal. Easily configurable and customizable.\r\n\r\nFeatures\r\nLog messages to Logtail (an online logging service)\r\nLog messages to a local file\r\nLog messages to the terminal (stdout)\r\nSpecify the logging level (e.g., INFO, ERROR, CRITICAL)\r\nAdd structured logging (extra data) to log messages\r\n\r\nInstallation\r\nBefore using KiwiLogger, you need to install the multikiwilogger library:\r\n\r\nbash\r\nCopy code\r\npip install multikiwilogger\r\n\r\nUsage\r\npython\r\n\r\nCopy code\r\nfrom multikiwilogger import KiwiLogger\r\n\r\n# Initialize the logger\r\nmlog = KiwiLogger(log_online=True, log_local=True, log_terminal=True)\r\n\r\n# Log a simple message\r\nmlog('This is an INFO message.')  # Defaults to INFO level\r\n\r\n# Log a message with a specific level\r\nmlog('Something bad happened.', level='ERROR')\r\n\r\n# Log a message with structured logging (extra data)\r\nmlog('Log message with structured logging.', level='INFO', extra={\r\n    'item': \"Orange Soda\",\r\n    'price': 100.00\r\n})\r\n\r\nConfiguration\r\nInitialize the KiwiLogger with the following optional parameters:\r\n\r\nname (default: __name__): The name of the logger.\r\nlevel (default: logging.INFO): The minimum log level for messages.\r\nlog_online (default: True): Log messages to Logtail.\r\nlog_local (default: False): Log messages to a local file.\r\nlog_terminal (default: True): Log messages to the terminal (stdout).\r\n\r\nEnvironment Variables\r\nKiwiLogger relies on the LOGTAIL_SOURCE_TOKEN environment variable to send logs to Logtail. Set this variable in your environment or add it to a .env file:\r\n\r\nmakefile\r\nCopy code\r\nLOGTAIL_SOURCE_TOKEN=your_logtail_source_token_here\r\nReplace your_logtail_source_token_here with the actual source token provided by Logtail.\r\n\r\nLicense\r\nThis project is licensed under the MIT License.\r\n",
+    "extra_metadata": {},
+    "id": "d5beabd62dbb9832795b6a5ac1cfd0b7a9299f1b0b8b50f3b3e385b88039e926",
+    "language": "python",
+    "name": "multikiwilogger",
+    "project_homepage": "",
+    "registry_name": "pypi",
+    "vendor_name": "OZRay"
+    }
+    return package_details
